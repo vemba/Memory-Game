@@ -1,0 +1,25 @@
+<div class="row">
+   <div class=" col-xs-offset-2 col-xs-10 ">
+      <h1 class="text-left">Mind Game</h1>
+      <div class="form-inline clearfix">
+         <label for="row" class="col-xs-2">Rows :</label>
+         <input type="text" class="form-control col-xs-5" id="row" ng-model="row" />
+      </div>
+      <button type="button clearfix" class="btn btn-primary" ng-disabled="(row == undefiend )||(row %2 != 0)" ng-click="start = 1;generateCard()">Start</button>
+       <br>
+      <p class="bg-info bg-danger clearfix col-xs-12 errorNum" ng-show="row %2 != 0 && row != undefiend">Enter Even Number</p>
+   </div>
+   <hr>
+   <div class="col-xs-12" ng-show="start == 1">
+      <div class="col-xs-12">
+         <table>
+            <tbody>
+                <tr ng-repeat="row in cardLayout" class="card" >
+                    <td ng-repeat="card in row" ng-click="card.status == 'unmatch' ? cardFunction(card,$parent.$index,$index):'';" ><span ng-show="card.status=='matched'||card.status=='open'" >{{card.No}}</span></td> 
+                </tr>
+            </tbody>
+        </table>
+          <p class="text-center count_div">Your Moves : {{move}}</p>
+      </div>
+   </div>
+</div>

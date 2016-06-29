@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset=utf-8>
+      <title>My Angular App</title>
+      <link href="bootstrap.css" rel="stylesheet">
+      <style>
+          table{
+            margin: 0 auto;
+            margin-top: 20px;
+          }
+          .card td{
+             display: inline-block;
+            border: 1px solid #ccc;
+            padding: 20px;
+            position: relative;
+          }
+         .card td span{    
+             position: absolute;
+             top: 10px;
+          }
+         .errorNum{
+             margin: 10px 0px;
+             font-size: 16px;
+             border-radius: 5px;
+             padding: 10px; 
+          }
+          .count_div{
+            margin-top: 20px;
+          }
+      </style>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <header>
+            <h1 class="page-title">Angular App</h1>
+         </header>
+         <main ng-view></main>
+      </div>
+   </body>
+   <script type="text/javascript" src="angular.js"></script>
+   <script type="text/javascript" src="angular-route.js"></script>
+   <script type="text/javascript" src="angular-cookies.min.js"
+      ></script>
+   <script type="text/javascript" src="app.js"></script>
+</html>
